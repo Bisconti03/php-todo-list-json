@@ -22,6 +22,7 @@
         .then((response) => {
             
             this.todoList = response.data;
+            
         });
     },
     
@@ -40,18 +41,21 @@
       ).then((response) => {
         console.log(response); 
 
-        this.todo.push(response.data.todo);
+        this.todoList.push(response.data.todo);
        
         
         
       });
       
       
+
+      
+      
       
 
     },
     
-    
+   
 
     },
 
