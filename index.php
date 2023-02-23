@@ -43,10 +43,15 @@
 
             <div class="row justify-content-center mt-4">
                 <div class="col-6 ">
-                    <div class="input-group mb-3 ">
-                        <input type="text" class="form-control fs-3" placeholder="Inserisci un elemento" aria-label="Inserisci un elemento" aria-describedby="button-addon2">
-                        <button class="btn btn-outline-warning fs-3" type="button" id="button-addon2">Inserisci</button>
-                    </div>
+                    <form action="api.php" method="POST" @submit.prevent="addTodo()">
+                     
+                        <div class="mb-3">
+                            <label for="inpputNewTodo" class="form-label"></label>
+                            <input v-model="newTask.text" @keyup.enter="submit" type="text" class="form-control" id="todo">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
             </div>
         
